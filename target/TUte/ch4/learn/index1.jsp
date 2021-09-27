@@ -28,7 +28,7 @@
     out.println("当前的时间："+new Date()+"<br>");
     if (cookie_response!=null){
         Date date = new Date();
-        String time = date.getYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSeconds()+"秒";
+        String time = date.getYear()+1900+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSeconds()+"秒";
         out.println("上次访问的时间："+cookie_response.getValue());
         cookie_response.setMaxAge(300);
         cookie_response.setValue(time);
