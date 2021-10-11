@@ -19,6 +19,7 @@
     <input name="radius" type="text" id="Radius">
     <input type="submit" name="submit" value="开始计算">
 </form>
-<jsp:setProperty name="circleBean" property="radius" param="Radius"/>
+<jsp:setProperty name="circleBean" property="radius"
+                 param="Radius"/>
 </body>
 </html>
