@@ -27,7 +27,7 @@ Password:<%=request.getParameter("password") %><br><br><br>
 
 <!-- The first method -->
 <%="The output of first method:" %><br>
-<jsp:useBean id="user" class="bean.User" scope="request"></jsp:useBean>
+<jsp:useBean id="user" class="bean.User" scope="request"/>
 <jsp:setProperty name="user" property="*"/>
 Name:<jsp:getProperty name="user" property="username"/><br>
 Password:<jsp:getProperty name="user" property="password"/><br><br><br>
