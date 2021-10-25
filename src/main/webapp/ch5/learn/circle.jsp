@@ -12,13 +12,15 @@
 </head>
 <body>
 <jsp:useBean id="circleBean" scope="session" class="bean.Circle"/>
-<jsp:getProperty name="circleBean" property="radius"/>
+
+<jsp:setProperty name="circleBean" property="radius" value="99"/>
 <%
-    int radius = Integer.parseInt(request.getParameter("radius"));
-    circleBean.setRadius(radius);
-    out.println("圆的半径为："+circleBean.getRadius());
+    int r= Integer.parseInt(request.getParameter("radius"));
+
+    out.println("圆的半径为："+circleBean.getRadius()+"<br>");
     out.print("圆的周长为："+circleBean.getcirclelength()+"<br>");
     out.println ("圆的面积为："+circleBean.getcirclearea());
 %>
+
 </body>
 </html>

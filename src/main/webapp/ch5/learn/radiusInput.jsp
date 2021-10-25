@@ -12,14 +12,12 @@
 </head>
 
 <body>
-<jsp:useBean id="circleBean" scope="session" class="bean.Circle"/>
+
 
 <form id="form1" name="form1" method="post" action="circle.jsp">
     请输入圆的半径：
     <input name="radius" type="text" id="Radius">
     <input type="submit" name="submit" value="开始计算">
 </form>
-<jsp:setProperty name="circleBean" property="radius"
-                 param="Radius"/>
 </body>
 </html>

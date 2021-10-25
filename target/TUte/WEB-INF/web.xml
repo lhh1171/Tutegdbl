@@ -1,6 +1,35 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <!-- 配置Servlet -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletHttp</servlet-name>
+    <servlet-class>servlet.LengthArea</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletHttp</servlet-name>
+    <url-pattern>/LenghArea</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>IsLogin</filter-name>
+    <filter-class>filter.IsLogin</filter-class>
+    <init-param>
+      <param-name>ref</param-name>
+      <param-value>Hello Filter</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>IsLogin</filter-name>
+    <url-pattern>/a_login.jsp</url-pattern>
+  </filter-mapping>
 </web-app>
